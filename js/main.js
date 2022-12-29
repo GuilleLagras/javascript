@@ -27,10 +27,20 @@ function tipoDePago (opciones,pagoEfectivo,pagoTarjeta){
     }
 }
 
-//-----Bienvenido----
-let bienvenida = prompt("Bienvenido a nuestro sitio web , por favor, ingrese su nombre")
-alert("Hola " + bienvenida + " esperamos que encuentres todo lo que buscas en nuestro sitio web")
-alert ("A continuacion podra ver los montos totales de su carrito y elegir los medios de pago que prefiera")
+//-----Bienvenido a nuestro sitio web----
+
+do {
+    let bienvenida = prompt("Bienvenido a nuestro sitio web , por favor, ingrese su nombre")
+
+if (bienvenida== "") {
+    alert("No pudimos registrar el nombre ingresado, por favor, vuelva a ingresar su nombre")
+}else { 
+    alert("Hola " + bienvenida + " ,esperamos que encuentres todo lo que buscas en nuestro sitio web")
+}
+} while (confirm("¿Desea reingresarlo?"));
+
+alert ("En esta seccion podra ver los montos totales de su carrito y elegir los medios de pago que prefiera")
+
 
 //-----Variables de productos------
 
@@ -54,7 +64,7 @@ alert("Su total a pagar seria de $" +productoFinalConIva)
 let calcularDescOInt = prompt ("Ingresa tu forma de pago preferida \n 1 Para pagar en efectivo \n 2 Para pagar con tarjeta de credito")
 
 let precioFinalMasDesc = tipoDePago(calcularDescOInt,productoFinalConIva,productoFinalConIva)
-confirm("¿Desea realizar la compra?")
+confirm("¿Desea realizar esta compra?")
 
 } while (confirm ("¿Quiere seguir comprando?")){
 
