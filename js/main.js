@@ -3,8 +3,8 @@ let confirmar = true
 do {
     //-----------Suma de productos--------
 
-function sumarTotalDeProductos (prod1=0,prod2=0,prod3=0){
-    return prod1+prod2+prod3
+function sumarTotalDePeliculas (peli1=0,peli2=0,peli3=0){
+    return peli1+peli2+peli3
 }
 
 //----------Calculo de IVA----------
@@ -30,7 +30,7 @@ function tipoDePago (opciones,pagoEfectivo,pagoTarjeta){
 //-----Bienvenido a nuestro sitio web----
 
 do {
-    let bienvenida = prompt("Bienvenido a nuestro sitio web , por favor, ingrese su nombre")
+    let bienvenida = prompt("Bienvenido a nuestro sitio web .Aqui encontraras todas tus peliculas y al mejor precio , por favor, ingrese su nombre")
 
 if (bienvenida== "") {
     alert("No pudimos registrar el nombre ingresado, por favor, vuelva a ingresar su nombre")
@@ -44,11 +44,11 @@ alert ("En esta seccion podra ver los montos totales de su carrito y elegir los 
 
 //-----Variables de productos------
 
-let producto1= Number(prompt("Ingresa el primer valor"))
-let producto2= Number(prompt("Ingresa el Segundo valor"))
-let producto3= Number(prompt("Ingresa el Tercer valor"))
+let pelicula1= Number(prompt("Ingresa el primer valor"))
+let pelicula2= Number(prompt("Ingresa el Segundo valor"))
+let pelicula3= Number(prompt("Ingresa el Tercer valor"))
 
-let productosFinales = sumarTotalDeProductos(producto1,producto2,producto3)
+let productosFinales = sumarTotalDePeliculas(pelicula1,pelicula2,pelicula3)
 alert("El monto total es de $" +productosFinales)
 
 let ivaDeLosProductos = calcularIva(productosFinales)
@@ -56,7 +56,7 @@ alert ("El IVA de su compra seria de $" +ivaDeLosProductos)
 
 //-------Suma de IVA al total de productos---------
 
-let productoFinalConIva = sumarTotalDeProductos(productosFinales,ivaDeLosProductos)
+let productoFinalConIva = sumarTotalDePeliculas(productosFinales,ivaDeLosProductos)
 alert("Su total a pagar seria de $" +productoFinalConIva)
 
 //-------Calculo de descuento-----
